@@ -1,0 +1,38 @@
+{
+    "ref_mesh": "C:/Users/paperspace/Desktop/Motionshift-PaperSpace/test_fox/images",
+    "iter": 5000,
+    "save_interval": 1000,
+    "texture_res": [
+        2048,
+        2048
+    ],
+    "train_res": [
+        1920,
+        1080
+    ],
+    "batch": 1,
+    "learning_rate": [
+        0.03,
+        0.01
+    ],
+    "ks_min": [
+        0,
+        0.25,
+        0.0
+    ],
+    "dmtet_grid": 64,
+    "mesh_scale": 2.5,
+    "background": "white",
+    "display": [
+        {
+            "bsdf": "kd"
+        },
+        {
+            "bsdf": "ks"
+        },
+        {
+            "bsdf": "normal"
+        }
+    ],
+    "out_dir": "test_fox_result"
+}

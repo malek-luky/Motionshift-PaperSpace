@@ -1,5 +1,5 @@
 {
-    "ref_mesh": "C:/Users/paperspace/Desktop/Motionshift-PaperSpace/test_fox/images",
+    "ref_mesh": "C:/Users/paperspace/Desktop/Motionshift-PaperSpace/test_fox",
     "iter": 5000,
     "save_interval": 1000,
     "texture_res": [

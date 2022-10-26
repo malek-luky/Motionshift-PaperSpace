@@ -1,8 +1,21 @@
-base_dir = C:\Users\admin\Desktop\NeRF\CascadePSP\test
+import argparse
+import os
+import sys
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="convert colmap to NeRF or LLFF(NeRD) format, automask objects, and process video")
+    parser.add_argument('--base_dir', 
+		    default='', help='add the base parent directory where folder images is located')
+
+args = parse_args()
+
+
+
+base_dir = os.path.join(basedir, args.base_dir)
 usable_files_list = []
 defect_directory = os.path.join(base_dir, 'unused_images').replace('\\', '/')
 defect_image_directory = os.path.join(defect_directory, 'images').replace('\\', '/')
-defect_mask_directory = os.path.join(defect_directory, 'mask').replace('\\', '/')
+defect_mask_directory = os.path.join(defect_directory, 'masks').replace('\\', '/')
 dirs = [defect_directory, defect_image_directory, defect_mask_directory]
 for d in dirs:
     if not os.path.isdir(d):

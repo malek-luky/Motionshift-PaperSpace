@@ -1,11 +1,28 @@
 pip install --upgrade pip
+
+# TODO
+git push
+
+# TODO GPU
+git pull
+nainstalovat colmap
 apt-get update -y
 apt update
-conda update --all --yes
-conda create --prefix /home/my_env python=3.9
-activate /home/my_env/
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-pip install torchtext
+pip install rembg
+rembg p C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/images C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/masks
+#mohl by byt problem se input argumenty do funkci - menil jsem je jak v colmap2poses tak v remove_pics.py
+python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/ones_and_zeros.py
+python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/colmap2poses.py --aabb_scale 64 --mask_path C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/masks --images C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/images --colmap_path C:/Users/paperspace/Desktop/COLMAP/App/COLMAP.bat C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/
+python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/remove_pics.py --base_dir C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox
+
+# podle me not necessary -6) Xcopy C:/Users/admin/Desktop/NeRF/CascadePSP/test C:/Users/admin/Desktop/NeRF/nvdiffrec/data/nerd/test_fox /E
+#-7) cd C:/Users/admin/Desktop/NeRF/nvdiffrec/data/nerd
+#-8) python C:/Users/admin/Desktop/NeRF/nvdiffrec/data/nerd/scale_images.py
+#-9) v C:/Users/admin/Desktop/NeRF/nvdiffrec/configs/test_fox.json prepsat path
+#-11) activate nvdiffrec
+#-12) cd C:/Users/admin/Desktop/NeRF/nvdiffrec
+#-13) python train.py --config configs/test_fox.json --display-interval 20
+
 
 pip install ninja imageio PyOpenGL glfw gdown xatlas
 pip install git+https://github.com/NVlabs/nvdiffrast/
@@ -13,9 +30,7 @@ pip install --global-option="--no-networks" git+https://github.com/NVlabs/tiny-c
 git clone https://github.com/NVlabs/nvdiffrec.git
 git clone https://github.com/malek-luky/Motionshift-PaperSpace.git
 cp C:/Users/paperspace/Desktop/Motionshift-PaperSpace/test_fox.json C:/Users/paperspace/Desktop/nvdiffrec/configs/
-
 python C:/Users/paperspace/Desktop/nvdiffrec/train.py --config C:/Users/paperspace/Desktop/nvdiffrec/configs/test_fox.json --display-interval 100
-python train.py --config configs/test_fox.json --display-interval 20
 
 
 pip install --upgrade pip

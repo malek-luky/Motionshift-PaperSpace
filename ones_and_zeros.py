@@ -2,10 +2,18 @@
 from PIL import Image
 from numpy import asarray
 import numpy as np
+import argparse
 import cv2
 import glob
 
-filenames = glob.glob("C:\\Users\\admin\\Desktop\\NeRF\\CascadePSP\\test\\masks\\*")
+def parse_args():
+    parser = argparse.ArgumentParser(description="convert colmap to NeRF or LLFF(NeRD) format, automask objects, and process video")
+    parser.add_argument('--base_dir',  type=str,
+		    default='', help='add the base parent directory where folder images is located')
+
+args = parse_args()
+base_dir = args.base_dir
+filenames = glob.glob(base_dir+"/*")
 filenames.sort()
 
 for file in filenames:

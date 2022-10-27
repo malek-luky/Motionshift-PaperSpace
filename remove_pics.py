@@ -2,16 +2,15 @@ import argparse
 import os
 import sys
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="convert colmap to NeRF or LLFF(NeRD) format, automask objects, and process video")
-    parser.add_argument('--base_dir',  type=str,
-		    default='', help='add the base parent directory where folder images is located')
+parser = argparse.ArgumentParser(description="convert colmap to NeRF or LLFF(NeRD) format, automask objects, and process video")
+parser.add_argument('--base_dir',  type=str,
+		default="", help='add the base parent directory where folder images is located')
 
-args = parse_args()
-
-
-
+args = parser.parse_args()
 base_dir = args.base_dir
+filenames = glob.glob(base_dir+"/*")
+filenames.sort()
+
 usable_files_list = []
 defect_directory = os.path.join(base_dir, 'unused_images').replace('\\', '/')
 defect_image_directory = os.path.join(defect_directory, 'images').replace('\\', '/')

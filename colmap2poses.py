@@ -66,6 +66,7 @@ def parse_args():
     return args
 
 args = parse_args()
+#basedir = scenedir (last arg during pythoc call)
 
 if args.match_type != 'exhaustive_matcher' and args.match_type != 'sequential_matcher':
     print('ERROR: matcher type ' + args.match_type + ' is not valid.  Aborting')

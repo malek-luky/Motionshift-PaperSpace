@@ -12,7 +12,7 @@ rembg p C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/images C:/Users/p
 python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/ones_and_zeros.py --base_dir C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/masks
 #our own mask
 python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/remove_pics.py --base_dir C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox #TODO NEFACHA
-python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/colmap2poses.py --aabb_scale 1 --mask_path C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/masks --images images --colmap_path C:/Users/paperspace/Desktop/Colmap/COLMAP.bat C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox
+python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/colmap2poses.py --aabb_scale 1 --mask_path masks --images images --colmap_path C:/Users/paperspace/Desktop/Colmap/COLMAP.bat C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox
 #automatic rmbg mask
 python C:/Users/paperspace/Desktop/Motionshift-PaperSpace/colmap2poses.py --aabb_scale 1 --mask C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/mask2 --images C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox/images --colmap_path C:/Users/paperspace/Desktop/Colmap/COLMAP.bat C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox
 

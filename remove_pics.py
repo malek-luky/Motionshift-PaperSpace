@@ -8,8 +8,6 @@ parser.add_argument('--base_dir',  type=str,
 
 args = parser.parse_args()
 base_dir = args.base_dir
-filenames = glob.glob(base_dir+"/*")
-filenames.sort()
 
 usable_files_list = []
 defect_directory = os.path.join(base_dir, 'unused_images').replace('\\', '/')

@@ -101,7 +101,6 @@ CAMERA_MODEL_IDS = dict([(camera_model.model_id, camera_model) \
                          for camera_model in CAMERA_MODELS])
 
 def run_colmap(basedir, match_type, colmap_path="Colmap"):
-    print(basedir)
     logfile_name = os.path.join(basedir, 'colmap_output.txt')
     logfile = open(logfile_name, 'w')
     
@@ -178,6 +177,7 @@ def gen_poses(basedir, match_type, colmap_path, factors=None):
         print('Need to run COLMAP')
         run_colmap(basedir, match_type, colmap_path)
     else:
+        print(basedir)
         print('Don\'t need to run COLMAP')
         
     print( 'Post-colmap')

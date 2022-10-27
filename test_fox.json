@@ -1,10 +1,10 @@
 {
     "ref_mesh": "C:/Users/paperspace/Desktop/Motionshift-PaperSpace/fox",
     "iter": 2000,
-    "save_interval": 200,
+    "save_interval": 400,
     "texture_res": [
-        2048,
-        2048
+        1920,
+        1080
     ],
     "train_res": [
         1920,
@@ -21,7 +21,7 @@
         0.0
     ],
     "dmtet_grid": 64,
-    "mesh_scale": 2.5,
+    "mesh_scale": 3.5,
     "background": "white",
     "display": [
         {

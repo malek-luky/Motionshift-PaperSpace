@@ -3,14 +3,14 @@
     "iter": 2000,
     "save_interval": 400,
     "texture_res": [
-        1920,
-        1080
+        2048,
+        2048
     ],
     "train_res": [
         1920,
         1080
     ],
-    "batch": 16,
+    "batch": 1,
     "learning_rate": [
         0.03,
         0.01
@@ -21,7 +21,7 @@
         0.0
     ],
     "dmtet_grid": 64,
-    "mesh_scale": 3.5,
+    "mesh_scale": 5,
     "background": "white",
     "display": [
         {

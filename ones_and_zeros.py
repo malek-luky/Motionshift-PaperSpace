@@ -8,7 +8,7 @@ import glob
 
 parser = argparse.ArgumentParser(description="convert colmap to NeRF or LLFF(NeRD) format, automask objects, and process video")
 parser.add_argument('--base_dir',  type=str,
-		default="", help='add the base parent directory where folder images is located')
+		default="", help='folder where masks pictures are located')
 
 args = parser.parse_args()
 base_dir = args.base_dir
